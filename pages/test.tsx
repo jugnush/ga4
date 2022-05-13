@@ -3,11 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import * as gtag from "../lib/gtag";
+// import * as gtag from "../lib/gtag";
 
 const Test: NextPage = () => {
   const buttonClick = () => {
-    gtag.event('button_click', 'Home page button', 'engagement', 1)
+    console.log('hi');
   }
   return (
     <div className={styles.container}>
@@ -23,12 +23,12 @@ const Test: NextPage = () => {
         </h1>
 
         <div>
-        <Link href="/" passHref>
-          <button onClick={buttonClick}>Back to home</button>
-        </Link>
+          <Link href="/" passHref>
+            <button onClick={buttonClick}>Back to home</button>
+          </Link>
         </div>
 
-      
+
       </main>
 
       <footer className={styles.footer}>
